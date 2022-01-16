@@ -5,11 +5,11 @@ const app = Vue.createApp({
   }),
   methods: {
     addItem(event) {
-      alert("Clicked!");
       let todo = {
         item: this.newItem,
       };
       this.todos.push(todo);
+      this.newItem = "";
     },
   },
 });
