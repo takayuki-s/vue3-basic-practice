@@ -13,6 +13,9 @@ const app = Vue.createApp({
       this.todos.push(todo);
       this.newItem = "";
     },
+    deleteItem(index) {
+      this.todos.splice(index, 1);
+    },
   },
 });
 app.mount("#app");
