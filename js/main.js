@@ -2,6 +2,7 @@ const app = Vue.createApp({
   data: () => ({
     newItem: "",
     todos: [],
+    message: "Hello Vue.js!",
   }),
   methods: {
     addItem(event) {
@@ -15,6 +16,9 @@ const app = Vue.createApp({
     },
     deleteItem(index) {
       this.todos.splice(index, 1);
+    },
+    clickHandler() {
+      this.message = this.message.split("").reverse().join("");
     },
   },
 });
