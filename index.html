@@ -22,7 +22,11 @@
         </li>
       </ul>
       <pre>{{ $data }}</pre>
+      <hr />
       <p v-once>{{ message }}</p>
+      <button v-on:click="clickHandler">Click</button>
+      <hr />
+      <p v-pre>{{ preMessage }}</p>
       <button v-on:click="clickHandler">Click</button>
     </div>
     <script src="https://unpkg.com/vue@3.1.5"></script>

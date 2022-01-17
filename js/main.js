@@ -3,6 +3,7 @@ const app = Vue.createApp({
     newItem: "",
     todos: [],
     message: "Hello Vue.js!",
+    preMessage: "Hello Vue.js! v-pre practice!",
   }),
   methods: {
     addItem(event) {
