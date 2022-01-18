@@ -28,6 +28,9 @@
       <hr />
       <p v-pre>{{ preMessage }}</p>
       <button v-on:click="clickHandler">Click</button>
+      <hr />
+      <p>{{ htmlMessage }}</p>
+      <p v-html="htmlMessage"></p>
     </div>
     <script src="https://unpkg.com/vue@3.1.5"></script>
     <script src="js/main.js"></script>

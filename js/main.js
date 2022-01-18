@@ -4,6 +4,8 @@ const app = Vue.createApp({
     todos: [],
     message: "Hello Vue.js!",
     preMessage: "Hello Vue.js! v-pre practice!",
+    htmlMessage:
+      'Hello <span style="color: red">Vue.js!</span> v-html practice!',
   }),
   methods: {
     addItem(event) {
