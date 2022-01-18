@@ -12,6 +12,11 @@ const app = Vue.createApp({
     textMessage: "Hello Vue.js! v-text practice!",
     url: "https://google.com",
   }),
+  computed: {
+    reversedMessage() {
+      return this.message.split("").reverse().join("");
+    },
+  },
   methods: {
     addItem(event) {
       if (this.newItem === "") return;
