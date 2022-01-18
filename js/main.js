@@ -7,6 +7,7 @@ const app = Vue.createApp({
     htmlMessage:
       'Hello <span style="color: red">Vue.js!</span> v-html practice!',
     cloakMessage: "Hello Vue.js! v-cloak practice!",
+    textMessage: "Hello Vue.js! v-text practice!",
   }),
   methods: {
     addItem(event) {
