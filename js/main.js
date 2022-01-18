@@ -3,6 +3,8 @@ const app = Vue.createApp({
     newItem: "",
     todos: [],
     message: "Hello Vue.js!",
+    number: 100,
+    ok: true,
     preMessage: "Hello Vue.js! v-pre practice!",
     htmlMessage:
       'Hello <span style="color: red">Vue.js!</span> v-html practice!',
