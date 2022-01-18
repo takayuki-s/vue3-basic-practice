@@ -33,6 +33,9 @@ const app = Vue.createApp({
     clickHandler() {
       this.message = this.message.split("").reverse().join("");
     },
+    reversedMessageMethod() {
+      return this.message.split("").reverse().join("");
+    },
   },
 });
 app.mount("#app");
