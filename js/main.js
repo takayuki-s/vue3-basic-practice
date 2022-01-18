@@ -6,6 +6,7 @@ const app = Vue.createApp({
     preMessage: "Hello Vue.js! v-pre practice!",
     htmlMessage:
       'Hello <span style="color: red">Vue.js!</span> v-html practice!',
+    cloakMessage: "Hello Vue.js! v-cloak practice!",
   }),
   methods: {
     addItem(event) {
