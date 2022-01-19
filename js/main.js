@@ -25,6 +25,9 @@ const app = Vue.createApp({
         this.basePrice = value / 1.1;
       },
     },
+    computedNumber() {
+      return Math.random();
+    },
   },
   methods: {
     addItem(event) {
@@ -44,6 +47,9 @@ const app = Vue.createApp({
     },
     reversedMessageMethod() {
       return this.message.split("").reverse().join("");
+    },
+    methodsNumber() {
+      return Math.random();
     },
   },
 });
