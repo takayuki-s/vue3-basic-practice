@@ -14,6 +14,9 @@ const app = Vue.createApp({
     basePrice: 100,
     km: 0,
     m: 0,
+    firstName: "",
+    lastName: "",
+    fullName: "",
   }),
   watch: {
     message(newValue, oldValue) {
@@ -26,6 +29,12 @@ const app = Vue.createApp({
     m(value) {
       this.km = value / 1000;
       this.m = value;
+    },
+    firstName(value) {
+      this.fullName = value + " " + this.lastName;
+    },
+    lastName(value) {
+      this.fullName = this.firstName + " " + value;
     },
   },
   computed: {
