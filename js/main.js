@@ -13,6 +13,11 @@ const app = Vue.createApp({
     url: "https://google.com",
     basePrice: 100,
   }),
+  watch: {
+    message(newValue, oldValue) {
+      console.log("new: %s, old: %s", newValue, oldValue);
+    },
+  },
   computed: {
     reversedMessage() {
       return this.message.split("").reverse().join("");
