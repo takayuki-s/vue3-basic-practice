@@ -12,10 +12,20 @@ const app = Vue.createApp({
     textMessage: "Hello Vue.js! v-text practice!",
     url: "https://google.com",
     basePrice: 100,
+    km: 0,
+    m: 0,
   }),
   watch: {
     message(newValue, oldValue) {
       console.log("new: %s, old: %s", newValue, oldValue);
+    },
+    km(value) {
+      this.km = value;
+      this.m = value * 1000;
+    },
+    m(value) {
+      this.km = value / 1000;
+      this.m = value;
     },
   },
   computed: {
