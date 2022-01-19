@@ -11,10 +11,19 @@ const app = Vue.createApp({
     cloakMessage: "Hello Vue.js! v-cloak practice!",
     textMessage: "Hello Vue.js! v-text practice!",
     url: "https://google.com",
+    basePrice: 100,
   }),
   computed: {
     reversedMessage() {
       return this.message.split("").reverse().join("");
+    },
+    taxIncludedPrice: {
+      get() {
+        return this.basePrice * 1.1;
+      },
+      set(value) {
+        this.basePrice = value / 1.1;
+      },
     },
   },
   methods: {

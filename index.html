@@ -49,6 +49,11 @@
       <a v-bind:href="url">Link1</a>
       <br />
       <a :href="url">Link2</a>
+      <hr />
+      <p>base price: <input type="text" v-model="basePrice" /></p>
+      <p>
+        tax included price: <input type="text" v-model="taxIncludedPrice" />
+      </p>
     </div>
     <script src="https://unpkg.com/vue@3.1.5"></script>
     <script src="js/main.js"></script>
