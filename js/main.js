@@ -16,7 +16,7 @@ const app = Vue.createApp({
     m: 0,
     firstName: "",
     lastName: "",
-    fullName: "",
+    // fullName: "",
   }),
   watch: {
     message(newValue, oldValue) {
@@ -30,12 +30,12 @@ const app = Vue.createApp({
       this.km = value / 1000;
       this.m = value;
     },
-    firstName(value) {
-      this.fullName = value + " " + this.lastName;
-    },
-    lastName(value) {
-      this.fullName = this.firstName + " " + value;
-    },
+    // firstName(value) {
+    //   this.fullName = value + " " + this.lastName;
+    // },
+    // lastName(value) {
+    //   this.fullName = this.firstName + " " + value;
+    // },
   },
   computed: {
     reversedMessage() {
@@ -51,6 +51,9 @@ const app = Vue.createApp({
     },
     computedNumber() {
       return Math.random();
+    },
+    fullName() {
+      return this.firstName + " " + this.lastName;
     },
   },
   methods: {
