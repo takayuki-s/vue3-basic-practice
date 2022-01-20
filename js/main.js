@@ -17,6 +17,7 @@ const app = Vue.createApp({
     firstName: "",
     lastName: "",
     // fullName: "",
+    colors: [{ name: "Red" }, { name: "Green" }, { name: "Blue" }],
   }),
   watch: {
     message(newValue, oldValue) {
@@ -36,6 +37,12 @@ const app = Vue.createApp({
     // lastName(value) {
     //   this.fullName = this.firstName + " " + value;
     // },
+    colors: {
+      handler(newValue, oldValue) {
+        console.log("Update!");
+      },
+      deep: true,
+    },
   },
   computed: {
     reversedMessage() {
@@ -77,6 +84,9 @@ const app = Vue.createApp({
     },
     methodsNumber() {
       return Math.random();
+    },
+    onClick(event) {
+      this.colors[1].name = "White";
     },
   },
 });
