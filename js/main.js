@@ -18,6 +18,9 @@ const app = Vue.createApp({
     lastName: "",
     // fullName: "",
     colors: [{ name: "Red" }, { name: "Green" }, { name: "Blue" }],
+    items: null,
+    keyword: "",
+    wordMessage: "",
   }),
   watch: {
     message(newValue, oldValue) {
@@ -43,6 +46,10 @@ const app = Vue.createApp({
       },
       deep: true,
     },
+  },
+  mounted() {
+    this.keyword = "JavaScript";
+    this.getAnswer();
   },
   computed: {
     reversedMessage() {
@@ -87,6 +94,28 @@ const app = Vue.createApp({
     },
     onClick(event) {
       this.colors[1].name = "White";
+    },
+    getAnswer() {
+      if (this.keyword === "") {
+        console.log("karamoji");
+        this.items = null;
+        return;
+      }
+      this.wordMessage = "Loading...";
+      const vm = this;
+      const params = { page: 1, per_page: 20, query: this.keyword };
+      axios
+        .get("https://qiita.com/api/v2/items", { params })
+        .then((response) => {
+          // console.log(response);
+          vm.items = response.data;
+        })
+        .catch((error) => {
+          vm.wordMessage = "Error!" + error;
+        })
+        .finally(() => {
+          vm.message = "";
+        });
     },
   },
 });
