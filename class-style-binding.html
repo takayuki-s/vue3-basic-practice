@@ -11,7 +11,9 @@
     <div id="app">
       <p>
         Hello
-        <span v-bind:class="{ large: isLarge, 'text-danger': hasError }"
+        <span
+          class="bg-gray text-blue"
+          v-bind:class="{ large: isLarge, 'text-danger': hasError }"
           >Vue.js!</span
         >
       </p>
