@@ -46,10 +46,16 @@ const app = Vue.createApp({
       },
       deep: true,
     },
+    keyword(newKeyword, oldKeyword) {
+      console.log(newKeyword);
+      this.wordMessage = "Waiting for you to stop typing...";
+      this.debouncedGetAnswer();
+    },
   },
   mounted() {
-    this.keyword = "JavaScript";
-    this.getAnswer();
+    // this.keyword = "JavaScript";
+    // this.getAnswer();
+    this.debouncedGetAnswer = _.debounce(this.getAnswer, 1000);
   },
   computed: {
     reversedMessage() {
