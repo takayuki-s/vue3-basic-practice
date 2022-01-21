@@ -120,7 +120,7 @@ const app = Vue.createApp({
           vm.wordMessage = "Error!" + error;
         })
         .finally(() => {
-          vm.message = "";
+          vm.wordMessage = "";
         });
     },
   },
