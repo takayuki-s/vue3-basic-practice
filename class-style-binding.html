@@ -11,11 +11,9 @@
     <div id="app">
       <p>
         Hello
-        <span v-bind:class="{ large: isLarge }">Vue.js!</span>
-      </p>
-      <p>
-        Hello
-        <span :class="{ large: isLarge }">Vue.js!</span>
+        <span v-bind:class="{ large: isLarge, 'text-danger': hasError }"
+          >Vue.js!</span
+        >
       </p>
     </div>
     <script src="https://unpkg.com/vue@3.1.5"></script>
