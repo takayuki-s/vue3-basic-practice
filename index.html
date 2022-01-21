@@ -82,6 +82,18 @@
         <li v-for="color in colors">{{ color.name }}</li>
       </ul>
       <button v-on:click="onClick">Click!</button>
+      <hr />
+      <h2>API Search</h2>
+      <p>
+        <input type="text" v-model="keyword" />
+      </p>
+      <p>{{ wordMessage }}</p>
+      <ul>
+        <li v-for="item in items">
+          <a v-bind:href="item.url" target="_blank">{{ item.title }}</a> likes:
+          {{ item.likes_count }} {{ item.likes}}
+        </li>
+      </ul>
     </div>
     <script src="https://unpkg.com/vue@3.1.5"></script>
     <script src="https://unpkg.com/axios@0.21.1/dist/axios.js"></script>
