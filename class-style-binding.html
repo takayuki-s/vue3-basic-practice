@@ -22,6 +22,17 @@
       <p>Hello <span v-bind:class="[largeClass, dangerClass]">Vue.js!</span></p>
       <hr />
       <p>Hello <span v-bind:class="classObject">Vue.js!</span></p>
+      <hr />
+      <p>
+        Hello
+        <span v-bind:class="isLarge ? largeClassObject : ''">Vue.js!</span>
+      </p>
+      <p>
+        Hello
+        <span v-bind:class="[isLarge ? largeClassObject : '', dangerClass]"
+          >Vue.js!</span
+        >
+      </p>
     </div>
     <script src="https://unpkg.com/vue@3.1.5"></script>
     <script src="js/class-style-binding.js"></script>

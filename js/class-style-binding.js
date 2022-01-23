@@ -8,6 +8,10 @@ const app = Vue.createApp({
       large: true,
       "text-danger": true,
     },
+    largeClassObject: {
+      large: true,
+      "bg-gray": true,
+    },
   }),
 });
 app.mount("#app");
