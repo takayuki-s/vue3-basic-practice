@@ -14,6 +14,10 @@ const app = Vue.createApp({
     },
     color: "blue",
     fontSize: 36,
+    styleObject: {
+      color: "blue",
+      fontSize: "48px",
+    },
   }),
 });
 app.mount("#app");
