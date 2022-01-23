@@ -12,6 +12,8 @@ const app = Vue.createApp({
       large: true,
       "bg-gray": true,
     },
+    color: "blue",
+    fontSize: 36,
   }),
 });
 app.mount("#app");
