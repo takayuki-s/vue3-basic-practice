@@ -3,8 +3,13 @@ const app = Vue.createApp({
     counter: 0,
   }),
   methods: {
-    clickHandler() {
+    clickHandler(event) {
       this.counter++;
+      console.log(event.target); //<button>Click2</button>
+      console.log(event.target.tagName); //BUTTON
+      console.log(event.target.innerHTML); // Click2
+      console.log(event.target.type); //submit
+      console.log(event.target.id); //btn
     },
   },
 });
