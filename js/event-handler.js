@@ -1,6 +1,7 @@
 const app = Vue.createApp({
   data: () => ({
     counter: 0,
+    message: "",
   }),
   methods: {
     clickHandler(event) {
@@ -10,6 +11,9 @@ const app = Vue.createApp({
       console.log(event.target.innerHTML); // Click2
       console.log(event.target.type); //submit
       console.log(event.target.id); //btn
+    },
+    clickHandler2(message) {
+      this.message = message;
     },
   },
 });
