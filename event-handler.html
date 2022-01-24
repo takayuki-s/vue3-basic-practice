@@ -13,7 +13,7 @@
       <button v-on:click="counter++">Click1</button>
       <button v-on:click="clickHandler" id="btn">Click2</button>
       <hr />
-      <button v-on:click="clickHandler2('Vue.js')">Click3</button>
+      <button v-on:click="clickHandler2($event, 'Vue.js')">Click3</button>
       <p>{{ message }}</p>
     </div>
     <script src="https://unpkg.com/vue@3.1.5"></script>

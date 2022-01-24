@@ -12,8 +12,9 @@ const app = Vue.createApp({
       console.log(event.target.type); //submit
       console.log(event.target.id); //btn
     },
-    clickHandler2(message) {
+    clickHandler2($event, message) {
       this.message = message;
+      console.log($event);
     },
   },
 });
