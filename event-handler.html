@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <p>{{ counter }}</p>
+      <button v-on:click="counter++">Click!</button>
+    </div>
     <script src="https://unpkg.com/vue@3.1.5"></script>
     <script src="js/event-handler.js"></script>
   </body>
