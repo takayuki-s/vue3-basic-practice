@@ -16,6 +16,9 @@ const app = Vue.createApp({
       this.message = message;
       console.log($event);
     },
+    clickHandlerTime() {
+      this.message = new Date().toLocaleTimeString();
+    },
   },
 });
 app.mount("#app");
