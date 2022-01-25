@@ -3,6 +3,7 @@ const app = Vue.createApp({
     message: "Hello Vue.js",
     checked: false,
     colors: [],
+    color: "",
   }),
 });
 app.mount("#app");

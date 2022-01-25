@@ -25,6 +25,14 @@
       <label for="red">Blue</label>
       <input type="checkbox" id="blue" value="blue" v-model="colors" />
       <p>{{ colors }}</p>
+      <hr />
+      <input type="radio" id="red" value="red" v-model="color" />
+      <label for="red">Red</label>
+      <input type="radio" id="green" value="green" v-model="color" />
+      <label for="green">Green</label>
+      <input type="radio" id="blue" value="blue" v-model="color" />
+      <label for="blue">Blue</label>
+      <p>{{ color }}</p>
     </div>
     <script src="https://unpkg.com/vue@3.1.5"></script>
     <script src="js/form-binding.js"></script>
