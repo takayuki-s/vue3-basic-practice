@@ -14,6 +14,17 @@
       <br />
       <textarea v-model="message">{{ message }}</textarea>
       <pre>{{ $data  }}</pre>
+      <hr />
+      <label for="checkbox">{{ checked }}</label>
+      <input type="checkbox" id="checkbox" v-model="checked" />
+      <hr />
+      <label for="red">Red</label>
+      <input type="checkbox" id="red" value="red" v-model="colors" />
+      <label for="red">Green</label>
+      <input type="checkbox" id="green" value="green" v-model="colors" />
+      <label for="red">Blue</label>
+      <input type="checkbox" id="blue" value="blue" v-model="colors" />
+      <p>{{ colors }}</p>
     </div>
     <script src="https://unpkg.com/vue@3.1.5"></script>
     <script src="js/form-binding.js"></script>
