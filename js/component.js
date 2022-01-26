@@ -1,9 +1,12 @@
+const helloComponent = {
+  template: "<p>Hello!</p>",
+};
+
 const app = Vue.createApp({
   data: () => ({}),
-});
-
-app.component("hello-component", {
-  template: "<p>Hello!</p>",
+  components: {
+    "hello-component": helloComponent,
+  },
 });
 
 app.mount("#app");
