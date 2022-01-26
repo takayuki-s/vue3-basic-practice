@@ -4,6 +4,8 @@ const app = Vue.createApp({
     checked: false,
     colors: [],
     color: "",
+    selected: "",
+    selections: "",
   }),
 });
 app.mount("#app");
