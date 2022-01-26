@@ -48,6 +48,9 @@
         <option>Blue</option>
       </select>
       <p>{{ selections }}</p>
+      <hr />
+      <input type="text" v-model.lazy="lazyMessage" />
+      <p>{{ lazyMessage }}</p>
     </div>
     <script src="https://unpkg.com/vue@3.1.5"></script>
     <script src="js/form-binding.js"></script>
