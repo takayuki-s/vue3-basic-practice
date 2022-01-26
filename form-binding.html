@@ -59,6 +59,9 @@
       <p>trimあり</p>
       <input type="text" v-model.trim="trimMessage" />
       <p>{{ trimMessage }}</p>
+      <hr />
+      <input type="number" v-model.number="age" />
+      {{ age + 10 }}
     </div>
     <script src="https://unpkg.com/vue@3.1.5"></script>
     <script src="js/form-binding.js"></script>

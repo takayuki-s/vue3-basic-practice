@@ -8,6 +8,7 @@ const app = Vue.createApp({
     selections: "",
     lazyMessage: "",
     trimMessage: "",
+    age: 0,
   }),
 });
 app.mount("#app");
