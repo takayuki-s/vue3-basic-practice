@@ -51,6 +51,14 @@
       <hr />
       <input type="text" v-model.lazy="lazyMessage" />
       <p>{{ lazyMessage }}</p>
+      <hr />
+      <p>trimなし</p>
+      <input type="text" v-model="trimMessage" />
+      <p>{{ trimMessage }}</p>
+      <br />
+      <p>trimあり</p>
+      <input type="text" v-model.trim="trimMessage" />
+      <p>{{ trimMessage }}</p>
     </div>
     <script src="https://unpkg.com/vue@3.1.5"></script>
     <script src="js/form-binding.js"></script>

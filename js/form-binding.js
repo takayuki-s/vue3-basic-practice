@@ -7,6 +7,7 @@ const app = Vue.createApp({
     selected: "",
     selections: "",
     lazyMessage: "",
+    trimMessage: "",
   }),
 });
 app.mount("#app");
