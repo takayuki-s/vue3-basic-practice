@@ -8,8 +8,13 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <button v-on:click="show = !show">Change</button>
+      <transition name="fade">
+        <p v-show="show">Hello Transition</p>
+      </transition>
+    </div>
     <script src="https://unpkg.com/vue@3.1.5"></script>
-    <script src="js/component.js"></script>
+    <script src="js/transition.js"></script>
   </body>
 </html>

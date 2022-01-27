@@ -1,3 +1,6 @@
 const app = Vue.createApp({
-  data: () => ({}),
+  data: () => ({
+    show: true,
+  }),
 });
+app.mount("#app");
