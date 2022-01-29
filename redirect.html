@@ -14,6 +14,9 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue-router@3.0.6/dist/vue-router.min.js"></script>
     <script>
+      const A = {
+        template: "<div><h2>This is A.</h2></div>",
+      };
       const B = {
         template: "<div><h2>This is B.</h2></div>",
       };
@@ -21,12 +24,8 @@
         routes: [
           {
             path: "/a",
-            redirect: { name: "page-b" },
-          },
-          {
-            name: "page-b",
-            path: "/b",
-            component: B,
+            component: A,
+            alias: "/b",
           },
         ],
       });
